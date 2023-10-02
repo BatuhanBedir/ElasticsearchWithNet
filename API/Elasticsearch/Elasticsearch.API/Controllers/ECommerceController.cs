@@ -45,9 +45,9 @@ public class ECommerceController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> PaginationQuery(int page=1, int pageSize=3)
+    public async Task<IActionResult> PaginationQuery(int page = 1, int pageSize = 3)
     {
-        return Ok(await _repository.PaginationQueryAsync(page,pageSize));
+        return Ok(await _repository.PaginationQueryAsync(page, pageSize));
     }
 
     [HttpGet]
@@ -61,4 +61,37 @@ public class ECommerceController : ControllerBase
     {
         return Ok(await _repository.FuzzyQueryAsync(customerNameList));
     }
+    [HttpGet]
+    public async Task<IActionResult> MatchQueryFullText(string categoryName)
+    {
+        return Ok(await _repository.MatchQueryFullTextAsync(categoryName));
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> MatchBoolPrefixQueryFullText(string customerFullName)
+    {
+        return Ok(await _repository.MatchBoolPrefixQueryFullTextAsync(customerFullName));
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> MatchPhareQueryFullText(string customerFullName)
+    {
+        return Ok(await _repository.MatchPhraseQueryFullTextAsync(customerFullName));
+    }
+    [HttpGet]
+    public async Task<IActionResult> CompoundQueryExampleOne(string cityName, double taxfulTotalPrice, string categoryName, string manufacturer)
+    {
+        return Ok(await _repository.CompoundQueryExampleOneAsync(cityName, taxfulTotalPrice, categoryName, manufacturer));
+    }
+    [HttpGet]
+    public async Task<IActionResult> CompoundQueryExampleTwo(string customerFullName)
+    {
+        return Ok(await _repository.CompoundQueryExampleTwoAsync(customerFullName));
+    }
+    [HttpGet]
+    public async Task<IActionResult> MultiMatchQueryFullTextAsync(string name)
+    {
+        return Ok(await _repository.MultiMatchQueryFullTextAsync(name));
+    }
+
 }
