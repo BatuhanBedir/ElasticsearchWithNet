@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34004.107
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elasticsearch.API", "Elasticsearch.API\Elasticsearch.API.csproj", "{B39DD7E3-02D1-4B5E-A502-B4BD95C3EECF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Elasticsearch.API", "Elasticsearch.API\Elasticsearch.API.csproj", "{B39DD7E3-02D1-4B5E-A502-B4BD95C3EECF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elasticsearch.WEB", "Elasticsearch.WEB\Elasticsearch.WEB.csproj", "{ABDC2048-6593-450F-8022-E1D26FD8D044}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{B39DD7E3-02D1-4B5E-A502-B4BD95C3EECF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B39DD7E3-02D1-4B5E-A502-B4BD95C3EECF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B39DD7E3-02D1-4B5E-A502-B4BD95C3EECF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABDC2048-6593-450F-8022-E1D26FD8D044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABDC2048-6593-450F-8022-E1D26FD8D044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABDC2048-6593-450F-8022-E1D26FD8D044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABDC2048-6593-450F-8022-E1D26FD8D044}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
