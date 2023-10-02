@@ -20,9 +20,26 @@ public class ProductsController : BaseController
     {
         return CreateActionResult(await _productService.SaveAsync(request));
     }
+    [HttpPut]
+    public async Task<IActionResult> Update(ProductUpdateDto request)
+    {
+        return CreateActionResult(await _productService.UpdateAsync(request));
+    }
+
     [HttpGet]
     public async Task<IActionResult> GetAll()
     {
         return CreateActionResult(await _productService.GetAllAsync());
     }
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetById(string id)
+    {
+        return CreateActionResult(await _productService.GetByIdAsync(id));
+    }
+    [HttpDelete]
+    public async Task<IActionResult> Delete(string id)
+    {
+        return CreateActionResult(await _productService.DeleteAsync(id));
+    }
+    
 }

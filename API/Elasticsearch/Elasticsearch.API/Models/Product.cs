@@ -18,6 +18,6 @@ public class Product
     {
         if (Feature is null) return new ProductDto(Id, Name, Price, Stock, null);
 
-        return new ProductDto(Id, Name, Price, Stock, new(Feature.Width,Feature.Height,Feature.Color));
+        return new ProductDto(Id, Name, Price, Stock, new(Feature.Width,Feature.Height,Feature.Color.ToString()));
     }
 }
